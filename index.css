@@ -1,0 +1,904 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+body{
+    font-family: "Open Sans", sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+ul{
+    list-style: 0;
+
+}
+/* mean heading*/
+.section {
+    padding: 100px;
+
+}
+.section .mean-heading {
+    text-align: center;
+    position: relative;
+}
+.section .mean-heading h2::before{
+    content: '';
+position: absolute;
+width: 118px;
+height: 2px;
+left:46% ;
+transform: translate x(-50%);
+bottom: 30px;
+background-color:#333;
+top:70px
+}
+.section .mean-heading h2::after {
+
+    content: '';
+    position: absolute;
+    border:2px solid #333;
+    background-color: white;
+    width :14px ;
+    height: 14px;
+    border-radius: 50%;
+    left: 49%;
+    top:60px
+}
+.section .mean-heading h2 {
+font-weight: normal;
+font-size: 40px
+; 
+text-transform: uppercase;
+margin-bottom: 10px;
+    padding: 10px;
+}
+
+.section .mean-heading p {
+    line-height: 1.4;
+    color: #777;
+}
+
+
+html
+{
+    scroll-behavior: smooth;
+}
+/* smal*/
+@media(min-width:768xp) {
+    .container {
+        width: 750px;
+    }
+}
+/* med*/
+@media(min-width:992px0) {
+    .container {
+        width: 950px;
+    }
+}
+    /*big*/
+    @media(min-width:1200px) {
+        .container {
+            width: 1150px;
+        }
+    }
+    /* start heaDER*/
+    header{
+        min-height: 97px;
+        left:0;
+        width: 100%;
+position: absolute;
+z-index: 2;
+    }
+    header .container {
+        display: flex;
+        justify-content: space-between;
+align-items: center;
+position: relative;
+border-bottom:1px solid white;
+    }
+
+
+    header .container ::after {
+        content: '';
+        position: absolute;
+height:1px;
+bottom: -1;
+ background-color: #a2a2a2;
+width: cal(100% - 30px);
+left: 15px;
+    } 
+.logo{
+    height: 50px;
+}
+
+ header nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+
+ }
+ nav i {
+    color: aliceblue;
+    font-size: 20px;
+ }
+nav ul {
+display: flex;
+justify-content: space-between;
+}
+@media(min-width:768px){
+   header nav .fa-bars {
+        display: none;
+    }
+
+}
+nav ul li a {
+    text-decoration: none;
+display: block;
+padding : 40px 10px  ;   
+color: white; 
+font-size: 14px;
+transform: 0.3s;
+} 
+@media(max-width:767px){
+nav ul {
+    display: none;
+}
+header nav .fa-bars:hover + ul {
+display: flex;
+flex-direction: column;
+TOP:100%;
+position: absolute;
+left:0;
+color :white;
+width:100%;
+background-color: rgb(11, 12, 12);
+}
+header nav .fa-bars:hover + ul li a {
+    padding: 10px;
+}
+}
+header nav ul .active,
+nav ul li a:hover {
+    color: #19c
+    ;
+    border-bottom: 1px solid #19c;
+
+
+}
+.form{
+    margin-left: 20px;
+    width: 40px;
+    height: 30px;
+    border-left: 1px solid white;
+    position: relative;
+}
+.form i {
+    color:white;
+    right: 0;
+    top:28%;
+    position: absolute;
+    font-size: 20px;
+}
+
+    /* End header*/
+    /*start landing*/
+    .landing{
+ min-height: 100vh;
+ background-color: #19c;
+ background-image: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/landing.jpg);
+background-size: cover;
+position: relative;
+    }
+    .landing .overlay
+    {
+        left:0;
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0 0 0 / 60%);
+
+    }
+    .landing .text {
+        left: 0;
+        top:50%;
+        width: 50%;
+        position: absolute;
+        transform:translate y(-50%);
+        background-color: rgb(22, 95, 122);
+        padding:50px ;
+justify-content: flex-end;        
+        color: aliceblue;
+
+
+    }
+    @media(max-width:767px){
+        .landing .text {
+            width:100%;
+
+        }
+    }
+    .content{
+       max-width: 500px;
+    }
+    .content h2 {
+        font-size:2rem;
+        font-weight: normal;
+        line-height: 1.5 ;
+        margin-bottom: 20px;;
+    }
+    .content p {
+line-height: 1.4;
+padding: 10px;
+color: #f0e9e9;
+    }
+    .fa-angle-left {
+font-size: 30px ;
+position: absolute;
+left: 0;
+top:70%;
+transform: translate y (-50%);
+padding: 20px;
+margin-right: 10px;
+color: aliceblue;
+
+    }
+    .fa-angle-right {
+        position: absolute;
+font-size: 30px;
+right: 0;
+top:70%;
+color: aliceblue;
+    }
+   .bullets {
+    position: absolute;
+    left: 50%;
+    transform: translate x ( -50%  );
+    bottom: 15px;
+    display: flex;
+    
+   }
+   .bullets li {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+   }
+ 
+.bullets .active {
+    background-color: #19c;
+}
+    /*end landing*/
+/* start services*/
+.services {
+    padding-top: 100px ;
+    padding-bottom: 100px;
+}
+@media(min-width:768px){
+
+
+  .section .services-container {
+    display: grid;
+grid-template-columns: repeat(auto-fill , minmax(450px,1fr));
+grid-column-gap: 20px;
+grid-row-gap:50px
+
+
+}
+}
+.srv { 
+    display: flex;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.srv i{
+    margin-right: 15px;
+    font-size: 30px;
+
+}
+.srv h3 {
+    padding:10px;
+color: #19c;
+}
+.srv p {
+    line-height: 1.5;
+color: #777;
+}
+/* end services*/
+/* start design*/
+.design {
+    padding-top:50px;
+    width: 100%;
+    background-image: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/design-features.jpg);
+    height: 70vh;
+    position: relative;
+overflow: hidden;
+
+}
+.design-overlay {
+    left:0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 60%);
+
+}
+.design-text {
+ 
+    background-color: rgb(37, 106, 129);
+    width: 50%;
+    transform: translate x (-50%);
+    position: absolute;
+    padding: 50px;
+    right: 0;
+    justify-content: flex-end;
+}
+
+.design img {
+    position: relative;
+    z-index: 2;
+    left: 20%;
+    bottom: -150px;
+}
+.design h4 {
+    font-size: 20px;
+    font-weight: normal;
+text-transform: uppercase;
+padding: 15px;
+margin-bottom: 20px;
+color: white;
+
+}
+.design-text p {
+    padding: 10px;
+    color: white;
+    padding-left: 20px;
+}
+.design-text i {
+    position: relative;
+    color: white;
+    top: -33px;
+    padding-right: 50px;
+    font-size: small;
+}/* start portfolio*/
+.portfoloi{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.portfoloi .shuffle {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    list-style: none
+    ;
+}
+.portfoloi .shuffle li {
+    padding: 10px;
+
+}
+.portfoloi .shuffle  .active {
+background-color: #19c;
+color:white;
+
+}
+.portfoloi .imges-container {
+    display: flex;
+    margin-top: 60px;
+flex-wrap: wrap;
+}
+
+.portfoloi .imges-container .box {
+flex-basis: 25%;
+position: relative;
+overflow: hidden;
+
+}
+@media(min-width:767px){
+    .portfoloi .imges-container .box {
+        flex-basis: 50%;
+}
+}
+@media(min-width:1119px){
+    .portfoloi .imges-container .box {
+        flex-basis: 25%;
+    }
+}
+@media(max-width:768px){
+    .portfoloi .imges-container .box {
+        flex-basis: 75%;
+    }
+}
+.portfoloi .imges-container .box img {
+    max-width: 100%;
+transition: 0.3s;
+}
+
+.portfoloi .imges-container .box .caption{
+position: absolute;
+background-color: white;
+left:0;
+bottom: -100%;
+transition: 0.3s;}
+.portfoloi .imges-container .box:hover .caption {
+bottom: 0;
+position: absolute;
+background-color: white;
+padding: 15px;
+width: 100%;
+left: 0;
+}
+.portfoloi .imges-container .box:hover img {
+    transform: rotate(3deg) scale(1.1);
+}
+
+.portfoloi .imges-container .box .caption h4 {
+padding: 10px;
+
+}
+.portfoloi .imges-container .box .caption p {
+color: #19c;
+}
+.more {
+    text-decoration: none;
+    color: white;
+    padding:20px 15px;
+    background-color: #19c;
+    display: block;
+    text-transform: uppercase;
+    width: fit-content;
+    margin: 30PX auto;
+}
+/* end portfolio*/
+/* start video*/
+.video {
+    position: relative;
+}
+.video video {
+width:100%
+
+}
+.video-overlay {
+    left:0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(45, 42, 42, 0.6);
+
+
+}
+.text-video {
+    width: 100%;
+    position: absolute;
+    top:50% ;
+    transform: translate y (-50%);
+padding: 50PX;
+text-align: center;
+background-color:rgb(38 148 188 /50%)
+}
+.text-video h2 {
+color: white;
+font-size: 25px;
+font-weight: normal;
+text-transform: uppercase;
+margin-bottom: 10px;
+}
+.text-video p {
+    left: 43%;
+    color: white;
+margin-bottom:  30px;
+}.text-video button {
+    background-color: black
+    ;
+    color:white;
+    padding: 10px 10px ;
+     border: none;
+     text-transform: uppercase;
+}
+/* end video*/
+/*start about*/
+.about-us {
+text-align: center;
+overflow: hidden;
+    padding-top :70px;
+}
+.about-us img {
+    padding-top: 50px;
+    position: relative;
+    bottom: -190px;
+    margin-top: -190px;
+}
+@media(max-width:767px){
+    .about-us img {
+        bottom: -50px;
+        margin-top: -50px;
+        width: 400px;;
+    }
+}
+/*end about*/
+/*start stats*/
+.stats {
+    position: relative;
+    padding-top:100px;
+    padding-bottom:100px;
+    text-align: center;
+    background-image: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/stats.png);
+background-size: cover;
+}
+.stats-overlay {
+    left:0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0  0 0 /70%);
+
+}
+.stats .container {
+    display: flex;
+position: relative;
+color: white;
+flex-wrap: wrap;
+}
+.stats .container .box {
+    color: white;
+    padding: 50px;
+background-color:rgb(38 148 188 /50%);
+}
+@media(max-width:767){
+.stats .container .box {
+flex-basis:100% ;
+}
+}
+@media(min-width:768){
+    .stats .container .box {
+    flex-basis:50% ;
+    }
+    }
+    @media(min-width:992px){
+        .stats .container .box {
+        flex-basis:25% ;
+        }
+        }
+.stats .container .box i {
+background-color: black;
+border-radius: 50px;
+padding:10px;
+margin: 0 30px 20px 20px;
+align-items: center;
+}
+
+.stats .container .box .numbers {
+
+font-size: 50px;
+text-transform: uppercase;
+font-weight: bold;
+margin-bottom: 20px;
+}
+/*end stats*/
+/*start skills*/
+.our-skills {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.our-skills .container {
+    justify-content: space-between;
+    position: relative;
+}
+.our-skills .container .testimonials h3 {
+font-weight: normal;
+text-transform: uppercase;
+text-align: center;
+padding-bottom: 20px;
+}
+.our-skills .container .testimonials p {
+    text-align: center;
+    color: #777;
+    line-height: 2;
+    margin: 0 0 30px;
+    
+}
+.our-skills .container .testimonials .content{
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+    text-align: center;
+}
+.our-skills .container .testimonials .content img {
+    text-align: center;
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+
+}
+.our-skills .container .testimonials .content .text { 
+
+    line-height: 2;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.our-skills .container .testimonials .content .text p {
+    color: #777;
+    text-align: right;
+
+}
+
+/*end skills*/
+/*  start qout*/
+.qout {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/quote.jpg);
+    background-size: cover;
+    width: 100%;
+}
+.qout-overlay {
+    left:0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0  0  0 /70%);
+
+}
+.qout .text {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+  color:aliceblue;
+  font-size: 30px;
+
+}
+.qout .text p {
+color:aliceblue;
+padding-top: 10px;
+font-size: 20px;
+}
+/*  end qout*/
+/*start pric*/
+.pricings {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+.plans {/*
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px 1fr));
+    gap: 30px;*/
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+.plans .plan {
+background-color: #fcfcfc
+;
+text-align: center;
+}
+.plans .plan .head {
+    border-bottom: 1px solid #19c;
+    border-top : 1px solid #19c;
+padding:40px 20px;
+}
+.plans .plan .head h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+}
+ .pricings .plans .plan .head span {
+font-size: 30px;
+font-weight: bold;
+position: relative;
+}
+ .pricings .plans .plan .head span::before{
+    content: '$';
+    font-size: 10px;
+    position: absolute;
+    top:-20;
+    margin-right: 10px;
+
+}
+ .pricings .plans .plan .head span::after{
+    content: '/MC';
+    font-size: 20px;
+    font-weight: normal;
+}
+.plans .plan ul {
+    list-style: none;
+    padding:20px;
+    
+}
+.plans .plan ul li {
+    padding:20px 30px 0 0;
+    border-bottom :1px solid #19c;
+    margin-bottom: 10PX;
+    padding-bottom: 10PX;
+
+}.plans .plan .footer {
+border: 1PX solid #19c;
+width: 100%;
+text-decoration: none;
+padding: 20PX;
+}
+.text-contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    align-items: center;
+}
+.text-contact p {
+    font-size: 20px;
+    font-weight: normal;
+    padding-bottom: 30px;
+}
+.text-contact .cont {
+    text-decoration: none;
+    background-color: #19c;
+    color:white;
+    border: 1px solid #19c;
+    padding:10px ;
+    /*end pric*/
+}.subscribe {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/subscribe.jpg);
+background-size: cover;
+width: 100%;
+position: relative;
+}
+.subscribe-overlay {
+    position: absolute;
+    left:0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0  0  0 /50%);
+}
+.subscribe i {
+    position: absolute;
+    color: white;
+    top: 30px;
+    left: 30px;
+    margin-right: 50px;
+}
+.subscribe .container {
+    display: flex;
+    position: relative;
+}
+@media(max-width :992px){
+    subscribe .container {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+.subscribe .container form {
+    display: flex;
+}.subscribe .container form input[type="email"]{
+border: 1px solid white;
+width: 200px;
+padding: 30px 20px 20px 30px;
+background: none; 
+border-right: none;
+color: white;
+caret-color:white ;
+}
+.subscribe .container form input[type="submit"]{
+background-color: #19c;
+color: white;
+padding: 10px;
+border-left: none;
+}
+.subscribe p {
+    position: absolute;
+    color: white;
+    right: 15%;
+    top:10px
+}
+/*end sub*/
+.contact-me {
+      padding-top: 100px;
+      padding-bottom: 100px;
+
+
+}.contact-me .content {
+    display: flex;
+    justify-content: space-between;
+position: relative;
+padding-top: 50px;
+} 
+.contact-me .content form {
+    width: 100%;
+}
+.contact-me .content form .main-input {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.contact-me .content form input[type="submit"] {
+padding: 20px;
+border: 1px solid none ;
+background-color: #19c;
+color: white;
+text-transform: uppercase;
+border:none;
+position: absolute;
+left: 73%;
+bottom: -50px;
+font-size: 15px;
+}
+.contact-me .content .box {
+    position: absolute;
+    left: 100%;
+    margin-left: 100px;
+}
+.contact-me .content .box h4 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.contact-me .content .box span {
+    color: #777;
+}.contact-me .content .box address {
+    color: #777;
+}
+/*end contact*/
+.footer {
+    position: relative;
+    margin-top: 200px;
+background-image: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/subscribe.jpg);
+text-align: center;
+color: white;
+background-size: cover;
+width: 100%;
+}
+.footer-overlay {
+    position: absolute;
+    left:0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0  0  0 /30%);
+}
+.footer .container {
+    position: relative;
+}
+.footer img {
+    margin-bottom: 20px;
+}
+.footer p:not(.copy-right) {
+    color: white;
+    padding: 20px;
+    border-bottom: 1px solid white;
+    width: fit-content;
+    margin: 20px auto;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.footer i {
+    padding: 20px;
+}
+.footer .copy-right {
+    font-weight: bold;
+}
+.footer span {
+    color: #19c;
+}
